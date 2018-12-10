@@ -1,6 +1,6 @@
-package day8;
+package day9;
 import java.util.Scanner;
-import day8.*;
+import day9.*;
 public class Main {
 	 public static void main(String[] args) {
 		 Scanner scanner = new Scanner(System.in);
@@ -8,36 +8,51 @@ public class Main {
 			 System.out.println("[메뉴]\n"
 			 		+ "1.계산기\n"
 			 		+ "2.Bmi\n"
-			 		+ "3.ForDemo\n"
-			 		+ "4.구구단\n"
-			 		+ "5.로또/N"
-			 		+ "6.이름,배열\n"
-			 		+ "7.이름,배열\n"
-			 		+ "8.이름과 성적배열\n"
-			 		+ "9.홀수,합\n"
-			 		+ "10.등수");
+			 		+ "3.달력\n"
+			 		+ "4.성별체크\n"
+			 		+ "5.성적표\n"
+			 		+ "6.구구단\n"
+			 		+ "7.로또\n"
+			 		+ "8.홀수합\n"
+			 		+ "9.이름과 성적배열\n"
+			 		);
 			 String select = scanner.next();
 			 switch(select) {
 			 case"0": System.out.println("종료...."); return;
 			 case"1": 
 				 Calc calc = new Calc();
-				  	  calc.Calc1();
+				 calc.Calc1();
 				 break;
 			 case"2": 
 				 Bmi bmi = new Bmi();
-				 	 bmi.Bmi1();
+				 bmi.Bmi1();
 				 break;
 			 case"3": 
 				 MyCalendar calendar=new MyCalendar();
-				 	calendar.Calendar1();
+				 calendar.Calendar1();
 				 break;
 			 case"4": 
 				 GenderCheker cheker = new GenderCheker();
-				 			cheker.cheker();
+				 cheker.cheker();
 				 break;
 			 case"5": 
 				 Grade grade = new Grade();
+				 grade.test();
 				 break;
+			 case"6": 
+				 Gugudan gugudan = new Gugudan();
+				 gugudan.test();
+				 break;
+			 case"7": 
+				 LottoNumberGen gen=new LottoNumberGen();
+				 gen.test();
+				 break;
+			 case"8": 
+				 OddSum oddSum = new OddSum();
+				 oddSum.test();
+				 
+				 break;
+				 
 			 default : break;
 			 }
 		 }
